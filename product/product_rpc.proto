@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package product.service.v1;
+option go_package = "./protogen";
+
+import "google/protobuf/empty.proto";
+import "product/product_payload.proto";
+
+service ProductSvc {
+  rpc HealthCheck(google.protobuf.Empty) returns (HealthCheckResponse) {}
+}
